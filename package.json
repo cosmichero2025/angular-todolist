@@ -4,12 +4,12 @@
   "main": "server.js",
   "scripts": {
     "ng": "ng",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --target=production",
-    "start": "node server.js"
+    "postinstall": "ng build --aot --target=production"
   },
   "private": true,
   "dependencies": {
@@ -53,5 +53,5 @@
   "engines": {
     "node": "~8.9.3",
     "npm": "~5.5.1"
-  },
+  }
 }
