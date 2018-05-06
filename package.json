@@ -1,15 +1,15 @@
 {
   "name": "ang-todo",
   "version": "0.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "ng": "ng",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod",
-    "start": "node app.js"
+    "postinstall": "ng build --aot --target=production",
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
@@ -29,11 +29,11 @@
     "core-js": "^2.5.4",
     "express": "^4.16.3",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "typescript": "~2.7.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.0",
-    "typescript": "~2.7.2",
     "@angular/language-service": "^6.0.0",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
