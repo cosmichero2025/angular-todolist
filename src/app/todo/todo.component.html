@@ -1,0 +1,24 @@
+<div class='view-wrapper'>
+  <div class='todo-wrapper'>
+    <h1 class='todo-header'>Todos</h1>
+
+    <div class='todos' [@todos]='todos.length'>
+      <div class='todo' *ngFor='let todo of todos; let i = index'>
+        <h1 class='todo-text'>{{todo.title}}</h1>
+
+        <button class='todo-delete' mat-button (click)='deleteTodo(i)'>Delete</button>
+      </div>
+    </div>
+
+
+    <div class='todos-footer'>
+      <h3>You have <span style="color: #C2185B">{{todoCount}}</span> things to do! Better get to work ;D</h3>
+      <mat-form-field>
+        <input matInput placeholder="Add Todo" [(ngModel)]='todoInput'>
+      </mat-form-field>
+        <button mat-raised-button color="primary" (click)='addTodo()'>Add</button>
+    </div>
+
+  </div>
+
+</div>
